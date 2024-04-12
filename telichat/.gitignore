@@ -1,0 +1,14 @@
+# Ignore all files in the 'env' directory
+env/
+
+# Ignore all compiled Python files
+*.pyc
+
+# Ignore the Python virtual environment files
+.Python
+
+# Ignore the __pycache__ directory and its contents
+__pycache__/
+
+# Ignore the SQLite database file
+db.sqlite3
