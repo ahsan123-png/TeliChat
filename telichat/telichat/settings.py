@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'a_home',
     'a_user',
+    'a_rtchat',
 
 ]
 
