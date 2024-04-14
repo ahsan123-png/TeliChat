@@ -8,7 +8,6 @@ def chat_view(request):
     chatGroup = get_object_or_404(ChatGroup, group_name="public-chat")
     chatMessages = chatGroup.chat_messages.all()[:30]
     form = ChatMessageCreateForm()
-    
     if request.htmx:
         form = ChatMessageCreateForm(request.POST)
         if form.is_valid:
@@ -22,5 +21,4 @@ def chat_view(request):
                 'user' : request.user
             }
             return render(request, 'a_rtchat/partials/chat_message_p.html', context)
-    
     return render(request, 'a_rtchat/chat.html', {'chat_messages' : chatMessages, 'form' : form})

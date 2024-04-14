@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*']
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,10 +83,9 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'telichat.wsgi.application'
-
-
+# for django channels we add a ASGI connections
+# WSGI_APPLICATION = 'telichat.wsgi.application' 
+ASGI_APPLICATION = 'telichat.asgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
