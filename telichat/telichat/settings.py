@@ -88,7 +88,12 @@ TEMPLATES = [
 ASGI_APPLICATION = 'telichat.asgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+# django layers
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
