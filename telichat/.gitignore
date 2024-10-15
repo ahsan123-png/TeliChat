@@ -12,3 +12,16 @@ __pycache__/
 
 # Ignore the SQLite database file
 db.sqlite3
+.env
+*.jpg
+
+\__pycache__
+*env
+*.pyc
+*.env
+*env
+*pyc
+*__pycache__
+.db.sqlite3
+*db.sqlite3
+*media
